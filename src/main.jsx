@@ -9,7 +9,7 @@ import { Navigation } from './components/Navigation';
 
 const router = createBrowserRouter([
   {
-    path: '/main',
+    path: '/',
     element: <Layout />
   },
   {
