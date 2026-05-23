@@ -16,10 +16,10 @@ export function Layout() {
       <QrCodeScanner/> */}
 
       <Routes>
-        <Route path='/qr' element={<QrCodeGenerator />}></Route>
-        <Route path='/scan' element={<QrCodeScanner />}></Route>
-        <Route path='/scanHistory' element={<ScanHistory />}></Route>
-        <Route path='/qrHistory' element={<GenerateHistory />}></Route>
+        <Route path='/qr-code/qr' element={<QrCodeGenerator />}></Route>
+        <Route path='/qr-code/scan' element={<QrCodeScanner />}></Route>
+        <Route path='/qr-code/scanHistory' element={<ScanHistory />}></Route>
+        <Route path='/qr-code/qrHistory' element={<GenerateHistory />}></Route>
       </Routes>
     </div>
   )
