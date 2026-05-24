@@ -6,12 +6,12 @@ import { SCAN_DATA } from '../constans'
 export function QrCodeScanner() {
     const [scanned, setScanned] = useState(null)
 
-    const scanHandle = (result) => {
-        if (!result) return
+    const scanHandle = (rawValue) => {
+        if (!rawValue) return;
         const prev = JSON.parse(localStorage.getItem(SCAN_DATA) || '[]')
-        if (prev.includes(result[0].rawValue)) return
-        setScanned(result)
-        localStorage.setItem(SCAN_DATA, JSON.stringify([...prev, result[0].rawValue]))
+        if (prev.includes(rawValue)) return
+        setScanned(rawValue)
+        localStorage.setItem(SCAN_DATA, JSON.stringify([...prev, rawValue]))
     }
 
     return (
